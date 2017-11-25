@@ -25,6 +25,11 @@ variables themselves.
     The major version of the Python interpreter.  For instance, "2" on Python-2.7.14 and "3" for
     Python-3.6.1.
 
+.. envvar:: PYTEST_PYMAJMINVER
+
+    The major and minor version of the Python interpreter.  For instance, "2.7" on Python-2.7.14 and
+    "3.6" for Python-3.6.1.
+
 Contents:
 
 .. toctree::
