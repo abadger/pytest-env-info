@@ -3,6 +3,7 @@ pytest-env-info
 
 .. image:: https://travis-ci.org/abadger/pytest-env-info.svg?branch=master
     :target: https://travis-ci.org/abadger/pytest-env-info
+    :alt: Unittest results on Travis-ci
 
 Push information about the running pytest into the environment
 
@@ -16,21 +17,17 @@ Features
 
 The following environment variables are set:
 
-.. envvar:: PYTEST_VERSION
-
+PYTEST_VERSION
     The version of the executing pytest
 
-.. envvar:: PYTEST_PYVER
-
+PYTEST_PYVER
     The version of the Python interpreter running pytest
 
-.. envvar:: PYTEST_PYMAJVER
-
+PYTEST_PYMAJVER
     The major version of the Python interpreter.  For instance, "2" on Python-2.7.14 and "3" for
     Python-3.6.1.
 
-.. envvar:: PYTEST_PYMAJMINVER
-
+PYTEST_PYMAJMINVER
     The major and minor version of the Python interpreter.  For instance, "2.7" on Python-2.7.14 and
     "3.6" for Python-3.6.1.
 
