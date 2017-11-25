@@ -8,7 +8,22 @@ Welcome to pytest-env-info's documentation!
 
 pytest-env-info provides the Python and Pytest version information in environment variables at
 the earliest stage of pytest starting up.  This allows users to configure other plugins using that
-information.  This was written specifically to solve the problem of pytest_cov needing to 
+information.  This was written specifically to solve the problem of pytest_cov expanding environment
+variables in :file:`.coveragerc` early in pytest startup when the unittests cannot inject these
+variables themselves.
+
+.. envvar:: PYTEST_VERSION
+
+    The version of the executing pytest
+
+.. envvar:: PYTEST_PYVER
+
+    The version of the Python interpreter running pytest
+
+.. envvar:: PYTEST_PYMAJVER
+
+    The major version of the Python interpreter.  For instance, "2" on Python-2.7.14 and "3" for
+    Python-3.6.1.
 
 Contents:
 
