@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-env-info',
-    version='0.1.0',
+    version='0.2.0',
     author='Toshio Kuratomi',
     author_email='a.badger@gmail.com',
     maintainer='Toshio Kuratomi',
