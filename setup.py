@@ -20,7 +20,7 @@ setup(
     maintainer_email='a.badger@gmail.com',
     license='MIT',
     url='https://github.com/abadger/pytest-env-info',
-    description='Push information about the running pytest into the environment',
+    description='Push information about the running pytest into envvars',
     long_description=read('README.rst'),
     py_modules=['pytest_env_info'],
     install_requires=['pytest>=3.1.1'],

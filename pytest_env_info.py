@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright 2017, Toshio Kuratomi
-# License: MIT (See https://github.com/abadger/pytest-env-info/blob/master/LICENSE)
+# License: MIT
+#   (See https://github.com/abadger/pytest-env-info/blob/master/LICENSE)
 import os
 import sys
 
@@ -15,10 +16,13 @@ old_PYMAJOR = None
 @pytest.hookimpl(hookwrapper=True, tryfirst=True)
 def pytest_load_initial_conftests(early_config, parser, args):
     """
-    This has to be a hookwrapper so that some plugins (pytest-cov) will have the environment
-    variables set when they run.  But it's really just pushing information that we can autodetect
-    into the environment before any other plugin runs.  That way plugins like pytest-cov which use
-    environment variables when they configure themselves can make use of those.
+    Push information about the running pytest that we can autodetect into the
+    environment before any other plugin runs.  That way plugins like pytest-cov
+    which use environment variables when they configure themselves can make use
+    of those.
+
+    This has to be a hookwrapper so that some plugins (pytest-cov) will have
+    the environment variables set when they run.
     """
     global old_VER
     global old_PYVER
@@ -38,7 +42,9 @@ def pytest_load_initial_conftests(early_config, parser, args):
 @pytest.hookimpl(trylast=True)
 def pytest_unconfigure(config):
     """
-    Cleanup the environment.  (Not really needed as pytest will exit soon after)
+    Cleanup the environment variables we set
+
+    (Not really needed as pytest will exit soon after)
     """
     global old_VER
     global old_PYVER
